@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+
+import { createContext } from 'react';
+import { useState } from 'react';
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
+import router from './router';
+export const themeContext = createContext('')
 
 function App() {
+  const [theme,setTheme] = useState(true);
+  const webThem = {theme,setTheme};
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <themeContext.Provider value={webThem}>
+     <div className={`App ${theme ? " bg-light text-black-50": "bg-dark bg-gradient text-white"}`}>
+       <RouterProvider router={router} ></RouterProvider>
     </div>
+   </themeContext.Provider>
   );
 }
 
