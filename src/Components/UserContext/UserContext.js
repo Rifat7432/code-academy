@@ -2,6 +2,7 @@ import React, { createContext } from "react";
 import {
   createUserWithEmailAndPassword,
   getAuth,
+  GithubAuthProvider,
   GoogleAuthProvider,
   onAuthStateChanged,
   sendEmailVerification,
@@ -32,6 +33,7 @@ const UserContext = ({ children }) => {
     };
   }, []);
   const googleProvider = new GoogleAuthProvider();
+  const githubProvider =  new GithubAuthProvider()
   const register = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
@@ -43,9 +45,13 @@ const UserContext = ({ children }) => {
   const registerGoogle = () => {
     return signInWithPopup(auth, googleProvider);
   };
-  const update = (name) => {
+  const registerGitHub = () => {
+    return signInWithPopup(auth, githubProvider);
+  };
+  const update = (name,photo) => {
     updateProfile(auth.currentUser, {
       displayName: name,
+      photoURL: photo,
     })
       .then(() => {
         // Profile updated!
@@ -81,6 +87,7 @@ const UserContext = ({ children }) => {
     update,
     registerGoogle,
     verification,
+    registerGitHub,
     forget,
     userData,
     loading,
