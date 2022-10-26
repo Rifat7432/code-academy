@@ -34,33 +34,7 @@ const SignUp = () => {
     const email = from.email.value;
     const password = from.password.value;
     const photo = from.photo.value;
-    if (!(password.length > 5 && password.length < 17)) {
-      toast.error(
-        "your password should not contain less then 6 and more then 16 character",
-        {
-          autoClose: 3000,
-        }
-      );
-      return;
-    }
-    if (!/(?=.*[A-Z])/.test(password)) {
-      toast.error("set at list one uppercase letter in password", {
-        autoClose: 3000,
-      });
-      return;
-    }
-    if (!/(?=.*[0-9])/.test(password)) {
-      toast.error("set at list one number in password", {
-        autoClose: 3000,
-      });
-      return;
-    }
-    if (!/(?=.*[!@#$%^&*+-])/.test(password)) {
-      toast.error("set at list one special character in password", {
-        autoClose: 3000,
-      });
-      return;
-    }
+    <div className='border-bottom-5 w-75'></div>
     register(email, password)
       .then((result) => {
         update(name, photo);

@@ -1,3 +1,78 @@
+
+
+
+
+# Coadcademy
+
+Codecademy is a site where we can get tutorial about programing
+
+
+## 🔗 Links
+[![Coadcademy](https://static-assets.codecademy.com/Courses/Learn-Redux/matching-game/codecademy_logo.png)](https://code-academy-7c314.web.app/)
+
+
+## Feedback
+
+This site for thoughs who are want to be junior developer.
+It realy helpfull for them.
+
+
+## Developer Experiance
+
+#### Making Responsive
+
+I have made tihs site responsive for mobile users and desktop users.
+Tablet users also comfortable on this.
+
+#### Authenntication
+
+user can sign up by google,githubor email password
+
+####  Dark,light mode
+
+user toogle in dark mode to light and light to dark
+
+
+
+## 🚀 About Me
+I'm  larning fontend web developer...
+
+
+## Github profile link
+
+[Github](https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-Rifat7432)
+
+
+## API Reference
+
+#### Get all items
+
+```http
+  GET https://assignment-10-server-rifat7432.vercel.app/courses
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+|  | `string` | **Required**.  nothing|
+
+#### Get item
+
+```http
+  GET https://assignment-10-server-rifat7432.vercel.app/courses/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`    | `string` | **Required**. Id of item to fetch |
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

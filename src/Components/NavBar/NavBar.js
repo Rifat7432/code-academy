@@ -8,6 +8,7 @@ import { themeContext } from "../../App";
 import { Link, NavLink } from "react-router-dom";
 import Image from "react-bootstrap/Image";
 import { DataContext } from "../UserContext/UserContext";
+import icon from '../../images/images-removebg-preview.png'
 
 const NavBar = () => {
   const { logOut, userData } = useContext(DataContext);
@@ -24,7 +25,10 @@ const NavBar = () => {
       >
         <Container>
           <Navbar.Brand className="w-25 h-25 ">
-            <Link to='/'><img src={logo} className="w-75 h-75 " alt="" /></Link>
+            <Link to='/'>
+              <img src={icon} className="w-25 h-25 " alt="" />
+              <img src={logo} className="w-75 h-75 " alt="" />
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
