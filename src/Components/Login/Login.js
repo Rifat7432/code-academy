@@ -31,18 +31,18 @@ const Login = () => {
     setUserEmail(event.target.value);
   };
   const forgetPassword = () => {
-  //   forget(userEmail)
-  //     .then((result) => {
-  //       toast.info(
-  //         "go to your email and set a new password.If you do not get the mail in inbox then check spam.",
-  //         { autoClose: 3000 }
-  //       );
-  //     })
-  //     .catch((error) => {
-  //       toast.error("Enter your email to set new password !", {
-  //         autoClose: 3000,
-  //       });
-  //     });
+    forget(userEmail)
+      .then((result) => {
+        toast.info(
+          "go to your email and set a new password.If you do not get the mail in inbox then check spam.",
+          { autoClose: 3000 }
+        );
+      })
+      .catch((error) => {
+        toast.error("Enter your email to set new password !", {
+          autoClose: 3000,
+        });
+      });
   };
   return (
     <div className="container">
