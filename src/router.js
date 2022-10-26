@@ -1,7 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
+import BlogPage from "./Components/BlogPage/BlogPage";
 import CheckOut from "./Components/CheckOut/CheckOut";
 import Courses from "./Components/Courses/Courses";
 import Dtails from "./Components/Dtails/Dtails";
+import ErrorPage from "./Components/ErrorPage/ErrorPage";
+import FAQ from "./Components/FAQ/FAQ";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import Main from "./Components/Main/Main";
@@ -45,6 +48,14 @@ const router = createBrowserRouter([
             element:<Login></Login>
            },
            {
+            path: 'bolg',
+            element:<BlogPage></BlogPage>
+           },
+           {
+            path: 'faq',
+            element:<FAQ></FAQ>
+           },
+           {
             path: 'checkout/:id',
             loader: async ({ params }) => {
               return fetch(
@@ -53,6 +64,10 @@ const router = createBrowserRouter([
             },
             element:<Privet><CheckOut></CheckOut></Privet>
            },
+           {
+            path:'*',
+            element:<ErrorPage></ErrorPage>
+           }
       ]
    }
   ]);

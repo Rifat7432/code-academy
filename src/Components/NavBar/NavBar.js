@@ -19,7 +19,7 @@ const NavBar = () => {
     <div>
       <Navbar
         bg={theme ? "primary" : "dark"}
-        variant={theme ? "dark" : "dark"}
+        variant="dark" 
         expand="lg"
       >
         <Container>
@@ -34,11 +34,11 @@ const NavBar = () => {
                 Courses
               </NavLink>
               <NavLink className={({ isActive }) =>
-                isActive ? 'btn btn-outline-light text-decoration-underline' : 'btn btn-outline-light m-3'} to="FAQ">
+                isActive ? 'btn btn-outline-light text-decoration-underline' : 'btn btn-outline-light m-3'} to="faq">
                 FAQ
               </NavLink>
               <NavLink className={({ isActive }) =>
-                isActive ? 'btn btn-outline-light text-decoration-underline' : 'btn btn-outline-light m-3'} to="login">
+                isActive ? 'btn btn-outline-light text-decoration-underline' : 'btn btn-outline-light m-3'} to="bolg">
                 Blog
               </NavLink>
               
@@ -57,7 +57,7 @@ const NavBar = () => {
                 <Link
                   onClick={logOut}
                   className="btn btn-outline-light  mx-4"
-                  to="/"
+                  
                 >
                   Log out
                 </Link>

@@ -12,7 +12,7 @@ const Sidbar = () => {
     },[])
     
     return (
-        <div>
+        <div className=' w-75 mx-auto mb-2'>
             
             {
                 newsCategory.map(category=><Link key={category.id} className='mb-3 d-block' to={`/courses/${category.id}`}>{category.name}</Link>)

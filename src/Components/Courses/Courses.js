@@ -13,10 +13,10 @@ const Courses = () => {
       <h1 className="mx-auto w-25">All our courses</h1>
       <Container>
         <Row>
-          <Col xs={3}>
+          <Col xs={12} md={3}>
             <Sidbar></Sidbar>
           </Col>
-          <Col xs={9}>
+          <Col xs={12} md={9}>
             <CoursesCard data={data}></CoursesCard>
           </Col>
         </Row>
