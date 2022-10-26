@@ -49,12 +49,12 @@ const SignUp = () => {
       });
       return;
     }
-    // if (!/(?=.*[0-9])/.test(password)) {
-    //   toast.error("set at list one number in password", {
-    //     autoClose: 3000,
-    //   });
-    //   return;
-    // }
+    if (!/(?=.*[0-9])/.test(password)) {
+      toast.error("set at list one number in password", {
+        autoClose: 3000,
+      });
+      return;
+    }
     // if (!/(?=.*[!@#$%^&*+-])/.test(password)) {
     //   toast.error("set at list one special character in password", {
     //     autoClose: 3000,
