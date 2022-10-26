@@ -55,12 +55,12 @@ const SignUp = () => {
       });
       return;
     }
-    // if (!/(?=.*[!@#$%^&*+-])/.test(password)) {
-    //   toast.error("set at list one special character in password", {
-    //     autoClose: 3000,
-    //   });
-    //   return;
-    // }
+    if (!/(?=.*[!@#$%^&*+-])/.test(password)) {
+      toast.error("set at list one special character in password", {
+        autoClose: 3000,
+      });
+      return;
+    }
     register(email, password)
       .then((result) => {
         update(name, photo);
