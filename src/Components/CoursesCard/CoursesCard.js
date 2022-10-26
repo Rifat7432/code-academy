@@ -10,7 +10,7 @@ const CoursesCard = ({ data }) => {
     navigate(`/courses/${id}`);
   };
   return (
-    <div>
+    <div className="text-black-50">
       <Row xs={1} md={2} lg={3} className="g-4">
         {data.map((course, idx) => (
           <Col onClick={()=>goTODetails(course.id)} key={course.id}>

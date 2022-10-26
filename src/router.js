@@ -1,10 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
+import CheckOut from "./Components/CheckOut/CheckOut";
 import Courses from "./Components/Courses/Courses";
 import Dtails from "./Components/Dtails/Dtails";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import Main from "./Components/Main/Main";
 import NavBar from "./Components/NavBar/NavBar";
+import Privet from "./Components/Privet/Privet";
 import SignUp from "./Components/SignUp/SignUp";
 
 const router = createBrowserRouter([
@@ -41,7 +43,11 @@ const router = createBrowserRouter([
            {
             path: 'login',
             element:<Login></Login>
-           }
+           },
+           {
+            path: 'checkout',
+            element:<Privet><CheckOut></CheckOut></Privet>
+           },
       ]
    }
   ]);
