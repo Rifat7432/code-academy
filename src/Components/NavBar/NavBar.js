@@ -23,12 +23,12 @@ const NavBar = () => {
         expand="lg"
       >
         <Container>
-          <Navbar.Brand>
-            <Link to='/'><img src={logo} className="w-25 h-25 " alt="" /></Link>
+          <Navbar.Brand className="w-25 h-25 ">
+            <Link to='/'><img src={logo} className="w-75 h-75 " alt="" /></Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className=" d-flex justify-content-around align-items-center">
+            <Nav className=" d-flex justify-content-around align-items-center ms-auto">
               <NavLink className={({ isActive }) =>
                 isActive ? 'btn btn-outline-light text-decoration-underline' : 'btn btn-outline-light m-3'} to="courses">
                 Courses

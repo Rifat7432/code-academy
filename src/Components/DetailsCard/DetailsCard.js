@@ -10,7 +10,7 @@ import { themeContext } from "../../App";
 const ref = React.createRef();
 const DetailsCard = ({ course }) => {
   const { theme, setTheme } = useContext(themeContext);
-  const { name, details, duration, img, price } = course;
+  const { name, details, duration, img, price ,id } = course;
   return (
     <div className='w-75 mx-auto py-5 text-black-50'>
       <Pdf targetRef={ref} filename="code-example.pdf">
@@ -23,7 +23,7 @@ const DetailsCard = ({ course }) => {
           <Card.Text>{details}</Card.Text>
           <Card.Text>Duration : {duration}</Card.Text>
           <Card.Text>Price : {price}</Card.Text>
-          <Link to="/checkout">
+          <Link to={`/checkout/${id}`}>
             <Button variant="primary">Get premium access.</Button>
           </Link>
         </Card.Body>
