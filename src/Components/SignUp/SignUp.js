@@ -121,10 +121,10 @@ const SignUp = () => {
         </p>
       </div>
         <div className="mx-auto w-75">
-        <button  class="btn btn-outline-primary mx-3" onClick={singUpByGoogle}>
+        <button  className="btn btn-outline-primary mx-3" onClick={singUpByGoogle}>
             <FaGoogle></FaGoogle><span> Register by Google</span>
         </button>
-        <button  class={`btn btn-outline-${theme? 'dark':'light'} mx-3`} onClick={singUpByGithub}>
+        <button  className={`btn btn-outline-${theme? 'dark':'light'} mx-3`} onClick={singUpByGithub}>
             <FaGithub></FaGithub> <span> Register by GitHub</span>
         </button>
         </div>

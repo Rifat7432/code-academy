@@ -24,26 +24,26 @@ const NavBar = () => {
       >
         <Container>
           <Navbar.Brand>
-            <Link to='/'><img src={logo} className="w-25 h-50 " alt="" /></Link>
+            <Link to='/'><img src={logo} className="w-25 h-25 " alt="" /></Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className=" d-flex justify-content-around align-items-center">
               <NavLink className={({ isActive }) =>
-                isActive ? 'btn btn-outline-light text-decoration-underline' : 'btn btn-outline-light mx-3'} to="signup">
+                isActive ? 'btn btn-outline-light text-decoration-underline' : 'btn btn-outline-light m-3'} to="courses">
                 Courses
               </NavLink>
               <NavLink className={({ isActive }) =>
-                isActive ? 'btn btn-outline-light text-decoration-underline' : 'btn btn-outline-light mx-3'} to="FAQ">
+                isActive ? 'btn btn-outline-light text-decoration-underline' : 'btn btn-outline-light m-3'} to="FAQ">
                 FAQ
               </NavLink>
               <NavLink className={({ isActive }) =>
-                isActive ? 'btn btn-outline-light text-decoration-underline' : 'btn btn-outline-light mx-3'} to="login">
+                isActive ? 'btn btn-outline-light text-decoration-underline' : 'btn btn-outline-light m-3'} to="login">
                 Blog
               </NavLink>
               
               {userData?.photoURL ? (
-                <p style={{cursor: 'pointer'}}  
+                <p style={{cursor: 'pointer'}}  className="m-3"
                 data-bs-toggle="tooltip" data-bs-placement="top"
                 data-bs-custom-class="custom-tooltip"
                 data-bs-title="This top tooltip is themed via CSS variables.">
@@ -51,7 +51,7 @@ const NavBar = () => {
         </p>
                 
               ) : (
-                <FaUserAlt></FaUserAlt>
+                <FaUserAlt className="m-3"></FaUserAlt>
               )}
               {userData?.uid ? (
                 <Link
